@@ -1,1 +1,2 @@
-import "./oyin"
+import "./oyin";
+import "./oyinCells";

@@ -1,4 +1,6 @@
-const contaner: HTMLDivElement = document.querySelector(".contaner")!;
+import { games } from "../oyints/oyinCells";
+
+const container: HTMLDivElement = document.querySelector(".contaner")!;
 
 export function cell(data: any) {
 	console.log("cell", data);
@@ -9,9 +11,10 @@ export function cell(data: any) {
 		h2.innerText = `${data[i].player1} vs ${data[i].player2}`;
 		h2.className = "cells";
 		h2.addEventListener("click", () => {
+			games(data[i].id);
 			console.log(data[i].id);
 		});
-		contaner.appendChild(div);
+		container.appendChild(div);
 		div.appendChild(h2);
 	}
 }

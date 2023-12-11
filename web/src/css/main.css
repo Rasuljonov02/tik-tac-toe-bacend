@@ -8,6 +8,8 @@ body {
 	display: grid;
 	place-items: center;
 }
+
+
 .conteneLogin {
 	width: 100%;
 	height: 100%;
@@ -37,6 +39,7 @@ body {
 	color: violet;
 	cursor: pointer;
 }
+
 .con {
 	display: flex;
 	flex-direction: column;
