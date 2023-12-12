@@ -1,6 +1,7 @@
 import { name as games,gameCell } from "../oyints/oyin";
 import { cel } from "./bot-yoq";
 
+
 const container: HTMLDivElement = document.querySelector(".contaner")!;
 
 export function cell(data: any) {
@@ -15,7 +16,7 @@ export function cell(data: any) {
 			gameCell()
 			games(data[i].id);
 			cel()
-			// console.log(data[i].id);
+			console.log(data[i].id);
 		});
 		container.appendChild(div);
 		div.appendChild(h2);

@@ -1,3 +1,5 @@
+import { zz } from "./reflesh";
+
 const player2: HTMLParagraphElement = document.querySelector(".name1")!;
 const player1: HTMLParagraphElement = document.querySelector(".name")!;
 const paly: HTMLButtonElement = document.querySelector(".paly")!;
@@ -12,6 +14,7 @@ export function gameCell() {
 		conb.appendChild(p);
 	}
 }
+const reflesh: HTMLButtonElement = document.querySelector(".reflesh")!;
 
 export function name(id: any) {
 	const cells: NodeListOf<HTMLParagraphElement> = document.querySelectorAll(".p")!;
@@ -26,6 +29,9 @@ export function name(id: any) {
 				paly.innerText = currentPlayer;
 			}
 			games(id, currentPlayer, i);
+			reflesh.addEventListener("click", () => {
+				zz(id);
+			});
 		});
 	});
 }
@@ -46,15 +52,14 @@ function games(id: any, currentPlayer: any, i: any) {
 		.then((data) => {
 			console.log(data);
 
-
 			if (data.player1 !== undefined) {
-							player1.innerText = data.player1;
+				player1.innerText = data.player1;
 			}
 
 			if (data.player2 !== undefined) {
-							player2.innerText = data.player2;
+				player2.innerText = data.player2;
 			}
-})
+		})
 		.catch((error) => {
 			console.error("Error:", error);
 		});
