@@ -1,5 +1,1 @@
-const container2: HTMLDivElement = document.querySelector(".con")!;
-
-export function games(id: any) {
-    console.log(id);
-}
+const paly: HTMLButtonElement = document.querySelector(".paly")!;

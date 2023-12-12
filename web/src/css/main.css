@@ -1,81 +1,126 @@
+/* Resetting margin and padding for all elements */
 body {
 	margin: 0;
 	padding: 0;
 }
+
+/* Main container styling */
 .catta {
-	width: 100%;
-	height: 100dvh;
 	display: grid;
 	place-items: center;
+	height: 100vh;
 }
 
-
+/* Login container styling */
 .conteneLogin {
+	display: none; /* Initially hidden */
+	position: absolute;
 	width: 100%;
 	height: 100%;
 	background-color: #52a099bd;
-	display: none;
-	position: absolute;
 	place-items: center;
 }
+
+/* 'X' element styling */
 .x {
 	position: absolute;
 	right: 50px;
 	top: 20px;
 }
-.new{
+
+/* 'New Game' button styling */
+.new {
+	position: absolute;
+	right: 50px;
+	top: 20px;
 	padding: 10px 25px;
 	border-radius: 10px;
-	position: absolute;
- right: 50px;
- top: 20px;
 }
-.new:hover {
+
+.new:hover,
+.x:hover {
 	background-color: rgb(119, 112, 112);
 	color: rgb(241, 241, 241);
 	cursor: pointer;
 }
-.x:hover {
-	color: violet;
-	cursor: pointer;
-}
 
+/* Login container input and button styling */
 .con {
+	display: none;
+}
+.as {
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
-	background-color: #45ff4550;
-	padding: 25px 35px;
+	width: 100%;
+	gap: 20px;
+	height: 100%;
+	padding: 20px 25px;
 	border-radius: 10px;
+	place-items: center;
+	background-color: #45ff4550;
 }
 .con input {
 	width: 200px;
 	border-radius: 10px;
 	padding: 5px 15px;
 }
+
 .newGame {
 	padding: 10px 25px;
 	border-radius: 10px;
 }
+
 .newGame:hover {
 	background-color: rgb(119, 112, 112);
 	color: rgb(241, 241, 241);
 	cursor: pointer;
 }
+
+/* Main game container styling */
 .contaner {
-	background-color: rgb(103, 103, 109);
+	background-color: rgb(99, 99, 114);
 	display: grid;
 	place-items: center;
 	grid-template-columns: repeat(3, 250px);
 	border-radius: 10px;
 }
+
+/* Styling for the cells inside the game container */
 .cells {
 	padding: 10px;
 	border-radius: 10px;
 	color: white;
 	border: 1px solid rgb(252, 252, 252);
 }
+
 .cells:hover {
 	color: wheat;
 	border: 2px solid rgb(255, 0, 0);
+}
+
+/* Second game container styling */
+.conb {
+	display: grid;
+	width: 450px;
+	height: 450px;
+	padding: 10px 15px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	gap: 10px;
+}
+
+/* Styling for the 'p' element */
+p {
+	display: grid;
+	place-items: center;
+	background-color: rgb(144, 196, 196);
+}
+
+/* Third game container styling */
+.conlar {
+	display: none;
+}
+.p {
+	font-size: 22px;
+	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
