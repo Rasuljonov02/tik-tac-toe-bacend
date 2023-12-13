@@ -124,3 +124,14 @@ p {
 	font-size: 22px;
 	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+span{
+	display: flex;
+	gap: 10px;
+	align-items: center;
+
+}
+.cona{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
